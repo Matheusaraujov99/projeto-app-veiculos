@@ -1,4 +1,4 @@
-# Projeto Marçal - Aplicativo MAUI com C#
+# Projeto app veículos - Aplicativo MAUI com C#
 Este projeto é um aplicativo de cadastro e visualização de veículos, desenvolvido com o framework .NET MAUI, utilizando C# e XAML, como prática dos conceitos aprendidos no curso.
 
 ## 📚 Tecnologias utilizadas

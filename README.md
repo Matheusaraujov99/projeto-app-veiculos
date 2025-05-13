@@ -29,7 +29,6 @@ Estrutura MVVM com organização de pastas (Model, ViewModel, Views)
 
 ---
 
-✍️ Autor
 Feito por Matheus Araújo 💙
 
 

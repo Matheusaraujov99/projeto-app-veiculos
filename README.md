@@ -33,4 +33,4 @@ Estrutura MVVM com organização de pastas (Model, ViewModel, Views)
 Feito por Matheus Araújo 💙
 
 
-📽️ [Clique aqui para ver a demonstração do app](https://youtu.be/SEU_LINK_AQUI)
+📽️ [Clique aqui para ver a demonstração do app](https://www.youtube.com/watch?v=20oG_iVw5gc)

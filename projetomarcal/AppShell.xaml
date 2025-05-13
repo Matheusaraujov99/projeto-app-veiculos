@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:projetomarcal"
+       x:Class="projetomarcal.AppShell">
+
+    <FlyoutItem Title="Home" FlyoutDisplayOptions="AsSingleItem">
+        <ShellContent Route="main" ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Marca">
+        <ShellContent Route="marca" ContentTemplate="{DataTemplate local:Marca}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Veículos">
+        <ShellContent Route="veiculo" ContentTemplate="{DataTemplate local:Veiculo}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Modelos">
+        <ShellContent Route="modelo" ContentTemplate="{DataTemplate local:ModeloPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Sobre">
+        <ShellContent Route="sobre" ContentTemplate="{DataTemplate local:Sobre}" />
+    </FlyoutItem>
+
+</Shell>

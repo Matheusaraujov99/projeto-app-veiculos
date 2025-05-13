@@ -1,0 +1,17 @@
+# Ignore arquivos temporários do Visual Studio
+.vs/
+*.user
+*.suo
+
+# Pastas de build
+bin/
+obj/
+
+# Arquivos do sistema
+*.log
+*.tmp
+*.db
+
+# Ignorar diretórios do Rider/VSCode
+.idea/
+.vscode/

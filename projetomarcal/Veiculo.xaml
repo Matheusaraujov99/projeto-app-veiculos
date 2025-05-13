@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projetomarcal.Veiculo"
+             BackgroundColor="White">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20" Spacing="10">
+
+                <Label Text="🚗 Veículos Disponíveis"
+                       FontSize="26"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="#D94814"/>
+
+                <CollectionView ItemsSource="{Binding Veiculos}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="15" Margin="10"
+                                   BorderColor="Gray"
+                                   CornerRadius="12"
+                                   HasShadow="True"
+                                   BackgroundColor="#F2F0EB">
+
+                                <StackLayout Spacing="5">
+
+                                    <Label Text="{Binding Nome}" 
+                                           FontSize="20" 
+                                           FontAttributes="Bold" 
+                                           TextColor="#D94814"/>
+
+                                    <Label Text="{Binding Tipo}" 
+                                           FontSize="16" 
+                                           FontAttributes="Italic"
+                                           TextColor="#D94814"/>
+
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Label Text="💰" FontSize="16"/>
+                                        <Label Text="{Binding Preco, StringFormat='Preço: {0:C}'}" 
+                                               FontSize="16" 
+                                               TextColor="Black"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Label Text="🚦" FontSize="16"/>
+                                        <Label Text="{Binding Quilometragem, StringFormat='Km Rodado: {0:N0} km'}" 
+                                               FontSize="16"
+                                               TextColor="Black"/>
+                                    </StackLayout>
+
+                                   
+                                    <Button Text="{Binding CarrinhoTexto}"
+                                            CommandParameter="{Binding}"
+                                            Clicked="ToggleCarrinho"
+                                            BackgroundColor="{Binding CorBotao}"
+                                            TextColor="White"
+                                            HeightRequest="40"
+                                            CornerRadius="8"/>
+
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

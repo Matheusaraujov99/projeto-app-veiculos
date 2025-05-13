@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projetomarcal.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout 
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Spacing="20">
+
+            <Label 
+                Text="Meu projeto Yarrama"
+                FontSize="Header" 
+                HorizontalOptions="Center"/>
+
+            <Image 
+                Source="logotipo1.png" 
+                WidthRequest="300" 
+                HeightRequest="300"
+                Aspect="AspectFit"
+                HorizontalOptions="Center"/>
+
+            <HorizontalStackLayout 
+                HorizontalOptions="Center" 
+                Spacing="20">
+
+                <Button 
+                    x:Name="BTNEncomenda"
+                    Text="Encomenda"
+                    WidthRequest="150" 
+                    HeightRequest="50"
+                    CornerRadius="10"
+                    Clicked="BTNMarca_Clicked">
+                    <Button.Shadow>
+                        <Shadow Brush="Black" Opacity="0.3" Radius="5"/>
+                    </Button.Shadow>
+                </Button>
+
+                <Button 
+                    x:Name="BTNVeiculo"
+                    Text="Veículos"
+                    WidthRequest="150" 
+                    HeightRequest="50"
+                    CornerRadius="10"
+                    Clicked="BTNVeiculo_Clicked">
+                    <Button.Shadow>
+                        <Shadow Brush="Black" Opacity="0.3" Radius="5"/>
+                    </Button.Shadow>
+                </Button>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout 
+                HorizontalOptions="Center" 
+                Spacing="20">
+
+                <Button 
+                    x:Name="BTNModelo"
+                    Text="Modelo"
+                    WidthRequest="150" 
+                    HeightRequest="50"
+                    CornerRadius="10"
+                    Clicked="BTNModelo_Clicked">
+                    <Button.Shadow>
+                        <Shadow Brush="Black" Opacity="0.3" Radius="5"/>
+                    </Button.Shadow>
+                </Button>
+
+                <Button 
+                    x:Name="BTNSobre"
+                    Text="Sobre"
+                    WidthRequest="150" 
+                    HeightRequest="50"
+                    CornerRadius="10"
+                    Clicked="BTNSobre_Clicked">
+                    <Button.Shadow>
+                        <Shadow Brush="Black" Opacity="0.3" Radius="5"/>
+                    </Button.Shadow>
+                </Button>
+
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projetomarcal.Sobre">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout 
+                Padding="25" Spacing="20" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="Center">
+                <Image 
+                    Source="logotipo1.png" 
+                    WidthRequest="1000" 
+                    HeightRequest="200" 
+                    HorizontalOptions="Center"/>
+
+                <Label 
+                    Text="Yarrama - Aplicativo de Veículos" 
+                    FontSize="24" 
+                    FontAttributes="Bold" 
+                    HorizontalOptions="Center"/>
+
+                <Label 
+                    Text="Desenvolvedor: Seu Nome" 
+                    FontSize="18" 
+                    HorizontalOptions="Center"/>
+                <Label 
+                    Text="RA: 1901963" 
+                    FontSize="18" 
+                    HorizontalOptions="Center"/>
+                <Label 
+                    Text="Data da Avaliação: 02/04/2025" 
+                    FontSize="18" 
+                    HorizontalOptions="Center"/>
+
+                <Button 
+                    Text="Home" BackgroundColor="#D94814" 
+                    TextColor="White" 
+                    FontSize="18" 
+                    WidthRequest="120" 
+                    HeightRequest="50" 
+                    CornerRadius="10" 
+                    HorizontalOptions="Center"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

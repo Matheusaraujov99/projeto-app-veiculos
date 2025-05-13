@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projetomarcal.Marca"
+             BackgroundColor="#F2F0EB">
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Padding="20">
+        <Frame CornerRadius="10" Padding="20" BackgroundColor="#F2F0EB" WidthRequest="350" BorderColor="Black">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Encomedar um veículo" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                <Frame 
+                    BorderColor="Black" 
+                    CornerRadius="5" 
+                    Padding="0">
+                    <Entry 
+                        x:Name="EntryMarca" 
+                        Placeholder="Marca do veículo" 
+                        Margin="5"/>
+                </Frame>
+                <Frame 
+                    BorderColor="Black" 
+                    CornerRadius="5" 
+                    Padding="0">
+                    <Entry 
+                        x:Name="EntryModelo" 
+                        Placeholder="Modelo do veículo" 
+                        Margin="5"/>
+                </Frame>
+                <Frame 
+                    BorderColor="Black" 
+                    CornerRadius="5" 
+                    Padding="0">
+                    <Entry 
+                        x:Name="EntryAno" 
+                        Placeholder="Ano" 
+                        Keyboard="Numeric" 
+                        Margin="5"/>
+                </Frame>
+                <Frame 
+                    BorderColor="Black" 
+                    CornerRadius="5" 
+                    Padding="0">
+                    <Entry 
+                        x:Name="EntryPreco" 
+                        Placeholder="Preço (R$)" 
+                        Keyboard="Numeric" 
+                        Margin="5"/>
+                </Frame>
+                <Frame 
+                    BorderColor="Black" 
+                    CornerRadius="5" 
+                    Padding="0">
+                    <Picker 
+                        x:Name="PickerSituacao" 
+                        Title="Situação" 
+                        Margin="5" 
+                        TextColor="Black">
+                        
+                        <Picker.Items>
+                            <x:String>Novo</x:String>
+                            <x:String>Semi novo</x:String>
+                           
+                        </Picker.Items>
+                    </Picker>
+                </Frame>
+
+                <Button 
+                    Text="Adicionar" 
+                    Clicked="OnAdicionarClicked" 
+                    BackgroundColor="#D94814" 
+                    TextColor="#F2E2C4" 
+                    CornerRadius="10"/>
+                
+            </VerticalStackLayout>
+        </Frame>
+
+        <CollectionView x:Name="ListaMarcas" HeightRequest="250" Margin="0,10">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame CornerRadius="10" Padding="10" BackgroundColor="#F2F0EB" BorderColor="Black">
+                        <Grid ColumnDefinitions="100,100,60,80,80,Auto" Padding="5">
+                            <Label Grid.Column="0" Text="{Binding Marca}" TextColor="Black" FontAttributes="Bold"/>
+                            <Label Grid.Column="1" Text="{Binding Modelo}" TextColor="Black" FontAttributes="Bold"/>
+                            <Label Grid.Column="2" Text="{Binding Ano}" TextColor="Black" FontAttributes="Bold"/>
+                            <Label Grid.Column="3" Text="{Binding Situacao}" TextColor="Black" FontAttributes="Bold"/>
+                            <Label Grid.Column="4" Text="{Binding Preco, StringFormat='R$ {0:N2}'}" TextColor="Black" FontAttributes="Bold"/>
+                            <Button Grid.Column="5" Text="Remover" Clicked="OnRemoverClicked" BackgroundColor="#D94814" TextColor="White" CornerRadius="10"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
